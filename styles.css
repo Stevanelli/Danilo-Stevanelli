@@ -1,0 +1,268 @@
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 15px 30px; /* Ajusta o padding para mais espaçamento */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha os itens ao espaço disponível */
+}
+
+header .logo {
+    font-size: 1.8em; /* Tamanho e espessura do nome */
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+header .nav-links a:hover {
+    background-color: #003060;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilos do Main */
+main {
+    padding: 90px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de Introdução */
+.intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+    font-size: 2.2em;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin: 15px 0;
+}
+
+/* Conteúdo Geral */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Seção de Experiência e Educação */
+.experience, .education {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience h1, .education h1 {
+    font-size: 2em;
+    color: #004080;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.experience-item, .education-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h2, .education-item h2 {
+    font-size: 1.4em;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.experience-item p, .education-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos da Calculadora */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 400px;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calculator input {
+    grid-column: span 4;
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.calculator button {
+    padding: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.calculator button:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+}
+
+footer .social-links {
+    margin: 10px 0;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    header .logo {
+        margin-right: 0; /* Remove a margem direita no layout móvel */
+    }
+
+    header nav {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .nav-links a {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    main {
+        padding: 70px 15px 15px;
+    }
+
+    .experience h1, .education h1 {
+        font-size: 1.8em;
+    }
+
+    .experience-item h2, .education-item h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Estilos da Página de Contato */
+.contact-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #004080;
+    word-wrap: break-word;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.contact-info p i {
+    font-size: 1.3em;
+}
+
+.contact-info p a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info p a:hover {
+    text-decoration: underline;
+}
